@@ -1,25 +1,25 @@
-const overlay = document.querySelector('.mobile-overlay');
+const overlay = document.querySelector('.mobile-overlay')
 function mytoggleMenu() {
-  overlay.classList.toggle('hide');
+  overlay.classList.toggle('hide')
 }
-mytoggleMenu();
+mytoggleMenu()
 const projects = [
   {
     id: 1,
-    title: 'Tonic',
+    title: 'To Do List Project',
     info: {
-      client: 'canopy',
-      role: 'Back End Dev',
-      year: 2015,
+      client: 'Microverse',
+      role: 'Full Stack Dev',
+      year: 2022,
     },
     screenshot: 'images/works/image_1.png',
     shortDescription:
-      'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+      'This Project is based on the To-Do-List Project and we are required build the project from scratch.',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. ",
     skills: ['html', 'css', 'javascript'],
-    liveLink: 'https://www.canopy.cr/tonic',
-    sourceLink: 'https://www.canopy.cr/tonic',
+    liveLink: 'https://teke85.github.io/To-Do-List-Project',
+    sourceLink: 'https://github.com/teke85/To-Do-List-Project',
   },
   {
     id: 2,
@@ -72,8 +72,8 @@ const projects = [
     liveLink: 'https://www.uber.com/',
     sourceLink: 'https://www.uber.com/',
   },
-];
-const myContent = document.querySelector('.card-container');
+]
+const myContent = document.querySelector('.card-container')
 const showInHtml = projects
   .map(
     (project, index) => `<div class="card-layout">
@@ -109,10 +109,10 @@ const showInHtml = projects
           <button type="button" id="${index}" class="see-btn">See Project</button>
         </div>
       </div>
-     </div>`,
+     </div>`
   )
-  .join('');
-myContent.innerHTML = showInHtml;
+  .join('')
+myContent.innerHTML = showInHtml
 /* View Pop Up */
 const popUpDetails = projects.map(
   (project) => `<section class="popup">
@@ -149,112 +149,117 @@ const popUpDetails = projects.map(
         </div>
         
         <div class="popup-project-buttons">
+          <a href="https://teke85.github.io/To-Do-List-Project">
           <button type="button" id="see-live-bt" class="newBtn" onclick="">
             See Live
           </button>
+          </a>
+          <a href="https://github.com/teke85/To-Do-List-Project">
           <button type="button" id="see-source-btn" class="newBtn" onclick="">
             See Source
           </button>
+          </a>
         </div>
       </div>
     </div>
-   </section>`,
-);
+   </section>`
+)
 /* Pop Up Menu */
-const popup = document.getElementById('popup');
+const popup = document.getElementById('popup')
 
 function f1() {
-  const x = Number(this.id);
-  popup.innerHTML = popUpDetails[x];
-  popup.style.display = 'block';
+  const x = Number(this.id)
+  popup.innerHTML = popUpDetails[x]
+  popup.style.display = 'block'
   document.getElementById('cl').onclick = function cl() {
-    popup.innerHTML = '';
-    popup.style.display = 'none';
-  };
+    popup.innerHTML = ''
+    popup.style.display = 'none'
+  }
 }
 
-document.getElementById('0').onclick = f1;
-document.getElementById('1').onclick = f1;
-document.getElementById('2').onclick = f1;
-document.getElementById('3').onclick = f1;
+document.getElementById('0').onclick = f1
+document.getElementById('1').onclick = f1
+document.getElementById('2').onclick = f1
+document.getElementById('3').onclick = f1
 
-const span = document.getElementsByClassName('close')[0];
+const span = document.getElementsByClassName('close')[0]
 // When the user clicks on <span> (x), close the modal
 span.onclick = () => {
-  popup.style.display = 'none';
-};
+  popup.style.display = 'none'
+}
 
 window.onclick = (event) => {
   if (event.target === popup) {
-    popup.style.display = 'none';
+    popup.style.display = 'none'
   }
-};
+}
 
 // Form Validation
 
-const form = document.getElementById('form');
-const emailError = document.querySelector('span.error');
+const form = document.getElementById('form')
+const emailError = document.querySelector('span.error')
 
 const isEmailValid = (email) => {
-  const regex = /^[a-z]+@[a-z0-9-]+\.[a-z0-9-.]+$/;
-  return regex.test(email.value);
-};
+  const regex = /^[a-z]+@[a-z0-9-]+\.[a-z0-9-.]+$/
+  return regex.test(email.value)
+}
 
 const checkEmail = (email) => {
-  let valid = true;
+  let valid = true
   if (!isEmailValid(email)) {
-    valid = false;
+    valid = false
   }
-  return valid;
-};
+  return valid
+}
 
 form.addEventListener('submit', (event) => {
-  event.preventDefault();
+  event.preventDefault()
 
-  const { email } = form.elements;
+  const { email } = form.elements
 
   if (!checkEmail(email)) {
     email.setCustomValidity(
-      'Please enter a valid email address and in lowercase letters.',
-    );
-    emailError.textContent = 'Please enter a valid email address and in lowercase letters.';
+      'Please enter a valid email address and in lowercase letters.'
+    )
+    emailError.textContent =
+      'Please enter a valid email address and in lowercase letters.'
   } else {
-    email.setCustomValidity('');
-    emailError.textContent = '';
-    emailError.className = 'error';
-    form.submit();
+    email.setCustomValidity('')
+    emailError.textContent = ''
+    emailError.className = 'error'
+    form.submit()
   }
-});
+})
 
-const fullname = document.getElementById('fullname');
-const email = document.getElementById('email');
-const message = document.getElementById('message');
+const fullname = document.getElementById('fullname')
+const email = document.getElementById('email')
+const message = document.getElementById('message')
 
 const store = () => {
   const inputs = {
     fullname: fullname.value,
     email: email.value,
     message: message.value,
-  };
-  localStorage.setItem('formInput', JSON.stringify(inputs));
-};
+  }
+  localStorage.setItem('formInput', JSON.stringify(inputs))
+}
 
 fullname.addEventListener('change', () => {
-  store();
-});
+  store()
+})
 
 email.addEventListener('change', () => {
-  store();
-});
+  store()
+})
 
 message.addEventListener('change', () => {
-  store();
-});
+  store()
+})
 
 const populateForm = () => {
-  const storage = localStorage.getItem('formInput');
-  fullname.value = JSON.parse(storage).fullname;
-  email.value = JSON.parse(storage).email;
-  message.value = JSON.parse(storage).message;
-};
-populateForm();
+  const storage = localStorage.getItem('formInput')
+  fullname.value = JSON.parse(storage).fullname
+  email.value = JSON.parse(storage).email
+  message.value = JSON.parse(storage).message
+}
+populateForm()
