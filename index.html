@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Poppins Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo-container"><a class="logo" href="#">My Logo</a></div>
+
+      <nav class="navbar">
+        <img
+          class="menu-icon"
+          onclick="mytoggleMenu()"
+          src="images/icons/Union.svg"
+          alt=""
+        />
+        <div id="overlay" class="mobile-overlay">
+          <img
+            class="menu-icon"
+            onclick="mytoggleMenu()"
+            src="images/icons/Cancel.svg"
+            alt=""
+          />
+          <ul id="main-menu" class="nav-menu flex">
+            <li id="nav-item" class="nav-item">
+              <a class="nav-link" onclick="mytoggleMenu()" href="#portfolio"
+                >Portfolio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="mytoggleMenu()" href="#about"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" onclick="mytoggleMenu()" href="#contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div id="desktop-menu">
+          <ul class="flex list">
+            <li>Portfolio</li>
+            <li>About</li>
+            <li>contact</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-container">
+        <h2>I’m Teke<br />Glad to see you!</h2>
+        <p class="hero-paragraph">
+          I’m a software developer! I can help you build a product , feature or
+          website Look through some of my work and experience! If you like what
+          you see and have a project you need coded, don’t hestiate to contact
+          me.
+        </p>
+
+        <span class="hero-subheading">LETS CONNECT</span>
+
+        <div class="socialmedia_icons">
+          <ul class="media_icons">
+            <li>
+              <a href="#">
+                <img src="images/icons/twitter.svg" alt="Twitter Icon" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/icons/linkedin.png" alt="LinkedIn Icon" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/icons/m.svg" alt="Media Icon" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/icons/cat.svg" alt="Github Icon" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="images/icons/fingers.svg" alt="Victory Icon" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!--Works Section-->
+    <!-- <section class="works"> -->
+    <div id="portfolio" class="card-container"></div>
+
+    <!--About Section Starts Here-->
+
+    <!--Modal Starts Here-->
+
+    <section id="about" class="about-section">
+      <div class="about">
+        <h1 class="about-myself-title">About Myself</h1>
+        <p class="about-myself-desc">
+          Hello I’m a software developer! I can help you build a product ,
+          feature or website Look through some of my work and experience! If you
+          like what you see and have a project you need coded, don’t hestiate to
+          contact me.
+        </p>
+        <div class="about-media-icons">
+          <h4 class="about-subheading">Lets Connect</h4>
+          <ul class="ul-content flex">
+            <li class="about-social-icons">
+              <a href="#">
+                <img
+                  class="social-media-icons"
+                  src="images/icons/cat.svg"
+                  alt="Github Icon"
+                />
+              </a>
+            </li>
+            <li class="about-social-icons">
+              <a href="#">
+                <img
+                  class="social-media-icons"
+                  src="images/icons/linkedin.png"
+                  alt="LinkedIn Icon"
+                />
+              </a>
+            </li>
+            <li class="about-social-icons">
+              <a href="#">
+                <img
+                  class="social-media-icons"
+                  src="images/icons/fingers.svg"
+                  alt="Victory Icon"
+                />
+              </a>
+            </li>
+            <li class="about-social-icons">
+              <a href="#">
+                <img
+                  class="social-media-icons"
+                  src="images/icons/twitter.svg"
+                  alt="Twitter Icon"
+                />
+              </a>
+            </li>
+            <li class="about-social-icons">
+              <a href="#">
+                <img
+                  class="social-media-icons"
+                  src="images/icons/m.svg"
+                  alt="Media Icon"
+                />
+              </a>
+            </li>
+          </ul>
+          <div class="btn-container">
+            <button type="submit" class="btn gmr-btn">Get my resume</button>
+          </div>
+        </div>
+      </div>
+      <div class="tech-list-container">
+        <div class="tech-container">
+          <div class="tech-title flex">
+            <h3>Languages</h3>
+            <img
+              class="svg-icon"
+              src="images/icons/expanded.png"
+              alt="expanded chevron"
+            />
+          </div>
+          <span class="separator"></span>
+          <div class="tech-content">
+            <ul class="flex tech-name">
+              <li class="tech-images">
+                <img src="images/icons/js.png" alt="Javascript Icon" />
+                <p>JavaScript</p>
+              </li>
+              <li class="tech-images">
+                <img src="images/icons/html5.png" alt="HTML5 Icon" />
+                <p>HTML</p>
+              </li>
+              <li class="tech-images">
+                <img src="images/icons/css3.png" alt="CSS3 Icon" />
+                <p>CSS</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="tech-container">
+          <div class="tech-title flex">
+            <h3>Frameworks</h3>
+            <img src="images/icons/collapsed.png" alt="collapsed chevron" />
+          </div>
+          <span class="separator"></span>
+        </div>
+        <div class="tech-container">
+          <div class="tech-title flex">
+            <h3>Skills</h3>
+            <img src="images/icons/collapsed.png" alt="collapsed chevron" />
+          </div>
+          <span class="separator"></span>
+        </div>
+      </div>
+    </section>
+
+    <!--About Section ends Here-->
+
+    <!--Contact Section Starts Here-->
+    <section id="contact" class="contact-form-sec">
+      <div class="contact-me-container">
+        <h1 class="contact-me">Contact me</h1>
+        <p class="contact-paragraph">
+          If you have an application you are interested in developing, a feature
+          that you need built or a project that needs coding. I’d love to help
+          with it
+        </p>
+        <form
+          novalidate
+          id="form"
+          class="form"
+          action="https://formspree.io/f/mlezyvyo"
+          method="post"
+        >
+          <input
+            name="fullname"
+            id="fullname"
+            type="text"
+            class="form_input"
+            required
+            maxlength="30"
+            placeholder="Yeremias"
+          />
+          <input
+            type="email"
+            id="email"
+            class="form_input"
+            required
+            placeholder="natajayanji@gmail.com"
+          />
+          <span class="error" aria-live="polite"></span>
+          <textarea
+            class="form_input"
+            rows="5"
+            maxlength="500"
+            required
+            placeholder="Write your message here"
+            cols="40"
+            name="message"
+            id="message"
+          ></textarea>
+          <button class="btn-submit" type="submit">Get In Touch</button>
+        </form>
+      </div>
+    </section>
+
+    <!--Modal Starts Here-->
+    <div class="popup-window" id="popup">
+      <section class="popup">
+        <div class="popup-header">
+          <h2 class="popup-project-title" id="popup-project-title"></h2>
+          <span class="close">&times;</span>
+        </div>
+        <div class="popup-project-info" id="project-info"></div>
+        <div id="project-image-holder">
+          <img
+            src="#"
+            alt="Tonic project screenshot"
+            class="popup-project-image"
+            id="popup-project-image"
+          />
+        </div>
+        <div class="popup-project-details">
+          <div class="column-left">
+            <p class="popup-project-description" id="project-description"></p>
+          </div>
+          <div class="column-right">
+            <div class="popup-project-stack" id="popup-project-stack"></div>
+            <div class="popup-project-buttons">
+              <button type="button" id="see-live-btn" onclick="">
+                See Live
+              </button>
+              <button type="button" id="see-source-btn" onclick="">
+                See Source
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
